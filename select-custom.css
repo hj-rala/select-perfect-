@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* select */
+.selectbox {
+  position: relative;
+  background: #ffffff;
+  font-size: 1.4rem;
+  border-radius: 1.6666666667vw;
+  height: 13.3333333333vw;
+}
+.selectbox .selectOpen {
+  z-index: 10;
+}
+.selectbox .btn_selectbox {
+  text-align: left;
+  font-size: 3.8888888889vw;
+  height: 13.3333333333vw;
+  border: 0.2777777778vw solid #000000;
+  background-color: #ffffff;
+  border-radius: 1.6666666667vw;
+  width: 100%;
+  padding: 0 11.6666666667vw 0 3.3333333333vw;
+  color: #a9a9a9;
+}
+.selectbox .btn_selectbox.first_placeholder {
+  color: #000000;
+}
+.selectbox .btn_selectbox-selected {
+  border-bottom: 0;
+  border-color: #3617cd;
+  border-radius: 1.6666666667vw 1.6666666667vw 0 0;
+}
+.selectbox .btn_selectbox::-moz-placeholder {
+  color: #a9a9a9 !important;
+}
+.selectbox .btn_selectbox:-ms-input-placeholder {
+  color: #a9a9a9 !important;
+}
+.selectbox .btn_selectbox::placeholder {
+  color: #a9a9a9 !important;
+}
+.selectbox .btn_selectbox.disabled {
+  border-color: #797979;
+  background-color: #f2f2f2;
+  color: #797979;
+}
+.selectbox .btn_selectbox.disabled:focus {
+  border-color: #797979;
+}
+.selectbox .btn_selectbox:focus {
+  border-color: #3617cd;
+}
+.selectbox .btn_selectbox::after {
+  content: "";
+  display: inline-block;
+  width: 5.5555555556vw;
+  height: 5.5555555556vw;
+  position: absolute;
+  top: 3.8888888889vw;
+  right: 4.4444444444vw;
+  background: url("../img/icon/ic_arrow_normal.svg") 0 0/100%;
+}
+.selectbox .combobox {
+  display: none;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  min-width: 1px;
+  max-height: 55.5555555556vw;
+  overflow-y: auto;
+  background-color: #ffffff;
+  z-index: 10;
+  padding: 3.8888888889vw 11.6666666667vw 3.8888888889vw 3.3333333333vw;
+  border-radius: 0 0 1.6666666667vw 1.6666666667vw;
+  border: 0.2777777778vw solid #3617cd;
+  border-top: 0;
+}
+.selectbox .combobox_option {
+  line-height: 1;
+}
+.selectbox .combobox_option:last-child > button,
+.selectbox .combobox_option:last-child > a {
+  margin-bottom: 0;
+}
+.selectbox .combobox_option > button,
+.selectbox .combobox_option > a {
+  font-size: 3.8888888889vw;
+  margin-bottom: 5.5555555556vw;
+  line-height: 5.5555555556vw;
+  font-weight: 500;
+  display: block;
+  width: 100%;
+  text-align: left;
+}/*# sourceMappingURL=select-custom.css.map */

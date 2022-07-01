@@ -1,0 +1,134 @@
+@function vw($target) {
+  $vw-context: (360 * 0.01) * 1px;
+  @return ($target/$vw-context) * 1vw;
+}
+
+$black: #000000; //Black
+$gray18: #181818;
+$gray30: #303030; //Dark Gray
+$gray60: #606060;
+$gray79: #797979;
+$gray91: #919191; //Gray
+$grayA9: #a9a9a9;
+$grayC1: #c1c1c1; //Silver Gray
+$grayD9: #d9d9d9;
+$grayE4: #e4e4e4;
+$grayF2: #f2f2f2; //Background
+$white: #ffffff;
+$point100: #ff9710; //Orange
+$point200: #3617cd; //Blue
+$point300: #ee0830; //Red
+$point400: #ffc603; //Yellow
+$point001: #ffeef0; //Right Red
+$point002: #fff4e5; //Pastel Peach
+$point003: #fff9e5; //Lemon Chiffon
+$point004: #eaf6fe; //Powder Blue
+$point005: #f7ecff; //Lavender
+
+* {margin: 0; padding: 0; list-style: none;}
+
+/* select */
+.selectbox {
+  position: relative;
+  background: $white;
+  font-size: 1.4rem;
+  border-radius: vw(6px);
+  height: vw(48px);
+
+  .selectOpen {
+    z-index: 10;
+  }
+
+  .btn_selectbox {
+    text-align: left;
+    font-size: vw(14px);
+    height: vw(48px);
+    border: vw(1px) solid $black;
+    background-color: $white;
+    border-radius: vw(6px);
+    width: 100%;
+    padding: 0 vw(42px) 0 vw(12px);
+    color: $grayA9;
+
+    &.first_placeholder {
+      color: $black;
+    }
+
+    &-selected {
+      border-bottom: 0;
+      border-color: $point200;
+      border-radius: vw(6px) vw(6px) 0 0;
+    }
+
+    &::placeholder {
+      color: $grayA9  !important;
+    }
+
+    // disabled
+    &.disabled {
+      border-color: $gray79;
+      background-color: $grayF2;
+      color: $gray79;
+
+      &:focus {
+        border-color: $gray79;
+      }
+    }
+
+    &:focus {
+      border-color: $point200;
+    }
+
+    &::after {
+      content: "";
+      display: inline-block;
+      width: vw(20px);
+      height: vw(20px);
+      position: absolute;
+      top: vw(14px);
+      right: vw(16px);
+      background: url("../img/icon/ic_arrow_normal.svg") 0 0 / 100%;
+    }
+  }
+
+  .combobox {
+    display: none;
+    position: absolute;
+    //top: vw(48px);
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    min-width: 1px;
+    max-height: vw(200px);
+    overflow-y: auto;
+    background-color: $white;
+    z-index: 10;
+    padding: vw(14px) vw(42px) vw(14px) vw(12px);
+    border-radius: 0 0 vw(6px) vw(6px);
+    border: vw(1px) solid $point200;
+    border-top: 0;
+  }
+
+  .combobox_option {
+    line-height: 1;
+
+    &:last-child {
+
+      >button,
+      >a {
+        margin-bottom: 0;
+      }
+    }
+
+    >button,
+    >a {
+      font-size: vw(14px);
+      margin-bottom: vw(20px);
+      line-height: vw(20px);
+      font-weight: 500;
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+  }
+}

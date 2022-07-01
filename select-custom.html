@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="select-custom.css" />
+  </head>
+  <body>
+    <div class="selectbox">
+      <!-- 
+        li > button의 aria-selected의 값이 true인거 가져옴, 
+        없을 시 첫번째 li button의 텍스트 가져옴, aria-selected값 true로 변경 
+      -->
+      <button id="input_Id2_1" type="button" class="btn_selectbox" aria-haspopup="listbox" aria-expanded="false"></button>
+      <div class="combobox scrollBar">
+        <ul class="combobox_listbox" role="listbox" aria-activedescendant="search_option_0" aria-labelledby="select">
+          <li class="combobox_option">
+            <button type="button" id="search_option_0" data-value="선택해 주세요." role="option" aria-selected="false">선택해 주세요.</button>
+          </li>
+          <li class="combobox_option">
+            <button type="button" id="search_option_1" data-value="선택 01" role="option" aria-selected="false">선택 01</button>
+          </li>
+          <li class="combobox_option">
+            <button type="button" id="search_option_2" data-value="선택 02" role="option" aria-selected="false">선택 02</button>
+          </li>
+          <li class="combobox_option">
+            <button type="button" id="search_option_3" data-value="선택 03" role="option" aria-selected="false">선택 03</button>
+          </li>
+          <li class="combobox_option">
+            <button type="button" id="search_option_4" data-value="선택 04" role="option" aria-selected="false">선택 04</button>
+          </li>
+          <li class="combobox_option">
+            <button type="button" id="search_option_5" data-value="선택 05" role="option" aria-selected="false">선택 05</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="selectbox">
+      <!-- 
+        li > button의 aria-selected의 값이 true인거 가져옴, 
+        없을 시 첫번째 li button의 텍스트 가져옴, aria-selected값 true로 변경 
+      -->
+      <button id="input_Id2_2" type="button" class="btn_selectbox" aria-haspopup="listbox" aria-expanded="false"></button>
+      <div class="combobox scrollBar">
+        <ul class="combobox_listbox" role="listbox" aria-activedescendant="search_option_0" aria-labelledby="select">
+          <li class="combobox_option">
+            <button type="button" id="search_option2_0" data-value="선택해 주세요." role="option" aria-selected="false">선택해 주세요.</button>
+          </li>
+          <li class="combobox_option">
+            <button type="button" id="search_option2_1" data-value="선택 01" role="option" aria-selected="false">선택 01</button>
+          </li>
+          <li class="combobox_option">
+            <button type="button" id="search_option2_2" data-value="선택 02" role="option" aria-selected="false">선택 02</button>
+          </li>
+          <li class="combobox_option">
+            <button type="button" id="search_option2_3" data-value="선택 03" role="option" aria-selected="false">선택 03</button>
+          </li>
+          <li class="combobox_option">
+            <button type="button" id="search_option2_4" data-value="선택 04" role="option" aria-selected="false">선택 04</button>
+          </li>
+          <li class="combobox_option">
+            <button type="button" id="search_option2_5" data-value="선택 05" role="option" aria-selected="false">선택 05</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="select-custom.js"></script>
+  </body>
+</html>
